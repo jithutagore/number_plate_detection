@@ -9,7 +9,7 @@ from traffiicDbOperation import *
 from dotenv import load_dotenv
 load_dotenv()
 api_host=os.getenv("API_HOST")
-api_port=os.getenv("API_PORT")
+api_port=int(os.getenv("API_PORT"))
 
 
 app = FastAPI()

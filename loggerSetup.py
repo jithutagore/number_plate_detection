@@ -1,18 +1,14 @@
 import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
+import os
 
 
 class Logger:
     def __init__(self, name: str, log_dir: str = "logs/", max_bytes: int = 5 * 1024 * 1024, backup_count: int = 3):
-        """
-        Initializes a logger with the specified name and log file configuration.
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
 
-        :param name: The name of the logger.
-        :param log_dir: The directory where the log file will be created.
-        :param max_bytes: Maximum size of the log file before rotating.
-        :param backup_count: Number of backup files to keep when rotating.
-        """
         # Generate a log file name with the current date and time
         current_time = datetime.now().strftime("%Y-%m-%d_%H")
         log_file = f"{log_dir}/{current_time}.log"
