@@ -17,10 +17,6 @@ This project is a **FastAPI-based application** for recognizing and managing veh
 Ensure the following are installed on your system:
 
 - **Python**: Version `3.11.3`
-- **pip**: Python's package installer
-- **Database**: A database such as **PostgreSQL** or **MySQL** for storing plate records.
-- **Dependencies**: Python libraries such as OpenCV, FastAPI, Uvicorn, dotenv, and others listed in `requirements.txt`.
-
 ---
 
 ## Environment Setup
