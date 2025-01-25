@@ -33,7 +33,7 @@ Ensure the following are installed on your system:
 
 ---
 
-## Setting Up a Virtual Environment
+## Setting Up a Virtual Environment and run the project
 
 1. **Install virtualenv** (if not already installed):  
    ```bash
