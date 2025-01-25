@@ -1,0 +1,38 @@
+\training\car-licenses-2.v1i.yolov5pytorch.zip
+\training\licence-plate
+\numberPlateDetectionEnv
+
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore VSCode workspace and settings files
+.vscode/
+
+# Ignore environment variables or local configs
+.env
+*.env
+
+# Ignore virtual environments
+venv/
+.env/
+.virtualenv/
+
+# Ignore log files
+*.log
+
+# Ignore Python egg info
+*.egg-info/
+.eggs/
+
+# Ignore build outputs
+build/
+dist/
+*.egg
+
+# Ignore cache directories
+.cache/
+*.cache/
+pip-wheel-metadata/
