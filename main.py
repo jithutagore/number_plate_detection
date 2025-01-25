@@ -8,6 +8,8 @@ from processImage import inferenceImage
 from traffiicDbOperation import *
 from dotenv import load_dotenv
 load_dotenv()
+api_host=os.getenv("API_HOST")
+api_port=os.getenv("API_PORT")
 
 
 app = FastAPI()
@@ -73,4 +75,4 @@ async def delete_plate(plate_number: str):
 
 if __name__ == "__main__":
     # Run the FastAPI app with Uvicorn directly from the Python script
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host=api_host, port=api_port)
