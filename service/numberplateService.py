@@ -6,7 +6,6 @@ import pathlib
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 from AI.ocr.PaddleOCR.paddleocr import PaddleOCR
-from AI.ocr.text_extracter import extract_text
 
 class NumberPlateDetection:
     def __init__(self):
@@ -30,25 +29,3 @@ class NumberPlateDetection:
         return final_image
     def get_paddle_model(self):
         return self.paddle_ocr
-
-# Load the image
-img = cv2.imread("1.png")
-
-# Initialize the NumberPlateDetection class
-number_plate_detection = NumberPlateDetection()
-
-# Get YOLO model components
-model, stride, name, pt = number_plate_detection.get_yolo_model()
-text_conversion_model = number_plate_detection.get_paddle_model()
-
-# Preprocess the image
-resized_image = number_plate_detection.preprocess_image(image=img)
-
-# Run YOLO detection
-detected_image,yolo_detection_confidence = run(model=model, original_image=img, finale=resized_image)
-print(yolo_detection_confidence)
-numberplate_value=extract_text(image=detected_image,ocr=text_conversion_model)
-print(numberplate_value)
-
-# Save the resulting image
-cv2.imwrite("croppedimage.png", detected_image)

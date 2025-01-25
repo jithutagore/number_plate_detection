@@ -1,14 +1,14 @@
 from fastapi import APIRouter
-from handler.extractQA import extractQuestion
+from handler.numberPlateToText import getNumberPlate
 from utils.loggerSetup import logger
 
 logger.info("hi")
 
-provider_router = APIRouter(prefix="/provider", tags=["provider"])
+number_plate_router = APIRouter(prefix="/traffic-control", tags=["Number plate detection"])
 
-@provider_router.get("/extractQuestion")
+@number_plate_router.get("/getNumberPlate")
 async def get_provider_route():
-    logger.info("extract questions")
-    return await extractQuestion()
+    logger.info("extract number plate value")
+    return await getNumberPlate()
 
 

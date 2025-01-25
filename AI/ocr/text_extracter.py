@@ -26,7 +26,8 @@ def extract_text(image,ocr):
                         if area>max_area:
                             max_area=area
                         area_dict[detected_text] = area
-            texts_above_threshold = [text for text, area in area_dict.items() if area/350000 > 1]
+            print(area_dict)
+            texts_above_threshold = [text for text, area in area_dict.items() if area/max_area > 0.85]
             output_text=" ".join(texts_above_threshold)
             # output_text=re.sub(r'[^a-zA-Z0-9]', '', output_text)
             return output_text

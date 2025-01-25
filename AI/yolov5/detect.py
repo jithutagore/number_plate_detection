@@ -52,7 +52,7 @@ def run(model,original_image,finale,
                         cls=int(each_value[5])
                         if cls==0:
                             cropped_img = original_image[y1:y2, x1:x2]
-                            return cropped_img
+                            return cropped_img,confidence
     except Exception as e:
         print(f"An error occurred: {e}")
         traceback.print_exc() 
