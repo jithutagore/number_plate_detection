@@ -25,7 +25,7 @@ Ensure the following are installed on your system:
 
 ## Environment Setup
 
-1. **Download the `.env` file**:  
+1. **Download and extract the `.env` file**:  
    [Click here to download](https://drive.google.com/file/d/1Ga7DGgQz8QwqDq5aPoNpdyt7ZT5sfat7/view?usp=sharing)
    
 2. **Place the `.env` file** in the project folder:
