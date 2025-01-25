@@ -46,4 +46,4 @@ Ensure the following are installed on your system:
 3. **Run the project:**
 ```bash
     python main.py
-    ```
+
