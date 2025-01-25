@@ -36,12 +36,12 @@ Ensure the following are installed on your system:
 ## Setting Up a Virtual Environment and run the project
 
 1. **Install virtualenv** (if not already installed):  
-   ```bash
-   pip install virtualenv
-   ```
+```bash
+pip install virtualenv
+```
 2. **activate  virtualenv**
 ```bash
-   numberPlateDetectionEnv\Scripts\activate
+numberPlateDetectionEnv\Scripts\activate
 ```
 3. **Run the project:**
 ```bash
